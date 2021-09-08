@@ -21,7 +21,7 @@ nameEl.onkeyup = function () { //nameEl에 키눌림을 확인한다
 }
 
 function isMatch(password1, password2) { //첫번째 패스워드와 두번째 패스워드를 인수로 받는다.
-  if (password1 == password2) { //두 패스워드가 일치하면
+  if (password1 === password2 || password1==="" || password2==="") { //두 패스워드가 일치하면
     return true //true를 반환
   } else return false //일치하지 않으면 false를 반환
 }
