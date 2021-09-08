@@ -19,12 +19,18 @@ nameEl.onkeyup = function() {
   isMoreThan4Length(nameEl.value)
 }
 function isMatch (password1, password2) {
-  if(password1 == password2)
-  return;
+  if(password1 == password2){
+  return true
+  }
+  else return false
 }
 firstPassword.onkeyup = function(){
-  isMatch(firstPassword.value, secondPassword.value)
+  if(isMatch(firstPassword.value, secondPassword.value)){
+    mismatchPassword.classList.add('hide')
+  } else mismatchPassword.classList.remove('hide')
 }
 secondPassword.onkeyup = function(){
-  isMatch(firstPassword.value, secondPassword.value)
+  if(isMatch(firstPassword.value, secondPassword.value)){
+    mismatchPassword.classList.add('hide')
+  } else mismatchPassword.classList.remove('hide')
 }
